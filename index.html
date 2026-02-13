@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sevgililer Günü Yapbozu</title>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>💖 Aşk Yapbozu 💖</h1>
+            <div class="stats">
+                <span class="moves">Hamle: <strong>0</strong></span>
+                <span class="time">Süre: <strong>00:00</strong></span>
+            </div>
+        </header>
+
+        <div class="difficulty-selector" id="difficultySelector">
+            <h2>Zorluk Seviyesi Seç</h2>
+            <button class="diff-btn" data-level="3">Kolay (3x3)</button>
+            <button class="diff-btn" data-level="4">Orta (4x4)</button>
+            <button class="diff-btn" data-level="5">Zor (5x5)</button>
+
+            <div class="image-selector">
+                <h3>Resim Seç</h3>
+                <div class="image-options">
+                    <div class="image-option active"
+                        data-image="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800">
+                        <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=200" alt="Güller">
+                        <span>Güller 🌹</span>
+                    </div>
+
+                    <div class="image-option"
+                        data-image="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800">
+                        <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=200" alt="Aşk">
+                        <span>Aşk ❤️</span>
+                    </div>
+                    <div class="image-option"
+                        data-image="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=800">
+                        <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=200" alt="Kalpler">
+                        <span>Kalpler 💝</span>
+                    </div>
+                </div>
+
+                <div class="custom-image">
+                    <label for="imageUpload" class="upload-btn">
+                        📷 Kendi Fotoğrafınızı Yükleyin
+                    </label>
+                    <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+                    <div id="customImagePreview" class="custom-preview"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-container" id="gameContainer" style="display: none;">
+            <div class="current-image-preview" id="currentImagePreview"></div>
+            <div class="puzzle-board" id="puzzleBoard"></div>
+
+            <div class="controls">
+                <button class="btn btn-secondary" id="newGameBtn">🔄 Yeni Oyun</button>
+                <button class="btn btn-hint" id="hintBtn">💡 İpucu</button>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-solve" id="autoSolveBtn">🤖 Otomatik Çöz</button>
+                <button class="btn btn-image" id="changeImageBtn">🖼️ Resim Değiştir</button>
+            </div>
+
+            <div class="solving-status" id="solvingStatus" style="display: none;">
+                <div class="spinner"></div>
+                <p>Aşkla çözülüyor... 💖</p>
+            </div>
+        </div>
+
+        <!-- Tebrikler Modal -->
+        <div class="celebration-overlay" id="celebrationOverlay">
+            <div class="celebration-content">
+                <div class="hearts-container" id="heartsContainer"></div>
+                <div class="confetti-container" id="confettiContainer"></div>
+                <h2>🎉 Tebrikler! 🎉</h2>
+                <p class="celebration-text">Aşkın gücüyle tamamladın! ❤️</p>
+                <div class="celebration-stats">
+                    <p>⏱️ Süre: <strong id="finalTime">00:00</strong></p>
+                    <p>🎯 Hamle: <strong id="finalMoves">0</strong></p>
+                    <p id="autoSolveInfo" style="display: none;">🤖 Robot aşkı ile çözüldü</p>
+                </div>
+                <button class="btn btn-primary" id="playAgainBtn">Tekrar Oyna</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
