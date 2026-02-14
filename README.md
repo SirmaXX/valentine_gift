@@ -6,6 +6,10 @@
 ###  Normalde jumpscare koyacaktım ama banlanmayı göze alamadım.
  
 
+### Direk oynamak isterseniz.
+https://sirmaxx.github.io/valentine_gift/
+
+
 <p align="center">
   <img src="readme_img/hediye.png" alt="Sevgililer Günü Hediyesi Ekran Görüntüsü" width="600">
 </p>
