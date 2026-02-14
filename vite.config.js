@@ -1,6 +1,6 @@
 
 export default {
-    base: './', // GitHub Pages gibi alt klasörlerde çalışması için gerekli
+    base: '/valentine_gift/', // GitHub Pages - valentine_gift klasöründe serve ediliyor
     build: {
         outDir: 'dist',
         assetsDir: 'assets',
